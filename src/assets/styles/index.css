@@ -1,0 +1,184 @@
+body {
+  background-color: #0b131e;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-family: sans-serif;
+}
+
+.menu {
+  margin-top: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: #202b3b;
+  padding: 10px;
+  align-items: center;
+  letter-spacing: 1.5px;
+  border-radius: 10px;
+  gap: 30px;
+  font-size: 12px;
+}
+.menu span {
+  text-align: center;
+}
+.menu span svg {
+  padding: 5px;
+}
+.menu .icon_title {
+  margin-top: 20px;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.container {
+  width: 600px;
+  margin-top: 40px;
+  color: white;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.container .search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container .search input {
+  width: 100%;
+  background-color: #202b3b;
+  outline: none;
+  border: none;
+  padding: 10px;
+  letter-spacing: 1.5px;
+  border-radius: 10px;
+}
+.container .search input::-moz-placeholder {
+  color: white;
+}
+.container .search input::placeholder {
+  color: white;
+}
+.container .top {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container .top .info {
+  display: flex;
+  flex-direction: column;
+}
+.container .top .info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.container .top .info .rain_chance {
+  font-size: 12px;
+  margin-bottom: 40px;
+}
+.container .top .info .temperature {
+  font-size: 36px;
+}
+.container .middle {
+  width: 100%;
+  background-color: #202b3b;
+  padding: 20px;
+  border-radius: 10px;
+}
+.container .middle .title {
+  font-size: 12px;
+}
+.container .middle .cards {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .middle .cards .card {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.container .middle .cards .card .time {
+  font-size: 12px;
+}
+.container .middle .cards .card .temperature {
+  font-size: 18px;
+}
+.container .bottom {
+  width: 100%;
+  background-color: #202b3b;
+  padding: 20px;
+  border-radius: 10px;
+}
+.container .bottom .bottom_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .bottom .bottom_top .title {
+  font-size: 12px;
+}
+.container .bottom .bottom_top .see_more {
+  background-color: #0095ff;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  outline: none;
+}
+.container .bottom .bottom_bottom {
+  display: flex;
+  gap: 100px;
+}
+.container .bottom .bottom_bottom .feature {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.container .bottom .bottom_bottom .feature .icon_and_feature {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.forecast {
+  margin-top: 40px;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  background-color: #202b3b;
+  border-radius: 10px;
+  padding: 20px;
+}
+.forecast .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.forecast .cards .card {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  position: relative;
+}
+.forecast .cards .card::after {
+  content: "";
+  display: block;
+  width: 280px;
+  height: 1px;
+  background: #2a384c;
+  left: 0;
+  bottom: -20px;
+  position: absolute;
+}/*# sourceMappingURL=index.css.map */
