@@ -6,176 +6,47 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="./src/assets/styles/app.css" />
     <link rel="stylesheet" href="./src/assets/styles/index.css" />
+    <script>
+      ((g) => {
+        var h,
+          a,
+          k,
+          p = "The Google Maps JavaScript API",
+          c = "google",
+          l = "importLibrary",
+          q = "__ib__",
+          m = document,
+          b = window;
+        b = b[c] || (b[c] = {});
+        var d = b.maps || (b.maps = {}),
+          r = new Set(),
+          e = new URLSearchParams(),
+          u = () =>
+            h ||
+            (h = new Promise(async (f, n) => {
+              await (a = m.createElement("script"));
+              e.set("libraries", [...r] + "");
+              for (k in g)
+                e.set(
+                  k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
+                  g[k]
+                );
+              e.set("callback", c + ".maps." + q);
+              a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+              d[q] = f;
+              a.onerror = () => (h = n(Error(p + " could not load.")));
+              a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+              m.head.append(a);
+            }));
+        d[l]
+          ? console.warn(p + " only loads once. Ignoring:", g)
+          : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+      })({
+        key: "AIzaSyCKNQr4zX94j9ioP69NFxU_BcbP7J21WLk",
+        v: "weekly",
+      });
+    </script>
     <script defer type="module" src="./src/app.js"></script>
   </head>
-  <body>
-    <div class="menu">
-      <div class="icon_title">
-        <span class="menu_weather_icon"></span>
-        <span>Weather</span>
-      </div>
-      <div class="icon_title">
-        <span class="menu_cities_icon"> </span>
-        <span>Cities </span>
-      </div>
-      <div class="icon_title">
-        <span class="menu_map_icon"></span>
-        <span>Map </span>
-      </div>
-      <div class="icon_title">
-        <span class="menu_settings_icon"></span>
-        <span>Settings </span>
-      </div>
-    </div>
-    <div class="container">
-      <div class="search">
-        <input type="text" placeholder="Search for cities" />
-      </div>
-      <div class="top">
-        <div class="info">
-          <h2>City name</h2>
-          <span class="rain_chance">Chance of rain: %</span>
-          <span class="temperature">31 cel</span>
-        </div>
-        <div class="currentWeatherIcon">ICON</div>
-      </div>
-      <div class="middle">
-        <span class="title">TODAY'S FORECAST</span>
-        <div class="cards">
-          <div class="card">
-            <span class="time"> 6:00 AM</span>
-            <span class="icon">ICON</span>
-            <span class="temperature">25</span>
-          </div>
-          <div class="card">
-            <span class="time"> 6:00 AM</span>
-            <span class="icon">ICON</span>
-            <span class="temperature">25</span>
-          </div>
-          <div class="card">
-            <span class="time"> 6:00 AM</span>
-            <span class="icon">ICON</span>
-            <span class="temperature">25</span>
-          </div>
-          <div class="card">
-            <span class="time"> 6:00 AM</span>
-            <span class="icon">ICON</span>
-            <span class="temperature">25</span>
-          </div>
-          <div class="card">
-            <span class="time"> 6:00 AM</span>
-            <span class="icon">ICON</span>
-            <span class="temperature">25</span>
-          </div>
-          <div class="card">
-            <span class="time"> 6:00 AM</span>
-            <span class="icon">ICON</span>
-            <span class="temperature">25</span>
-          </div>
-        </div>
-      </div>
-      <div class="bottom">
-        <div class="bottom_top">
-          <span class="title">AIR CONDITIONS</span>
-          <button class="see_more">See more</button>
-        </div>
-        <div class="bottom_bottom">
-          <div>
-            <div class="feature">
-              <div class="icon_and_feature">
-                <span class="real_feel"></span>
-                <span>Real Feel</span>
-              </div>
-              <span class="temp">20</span>
-            </div>
-
-            <div class="feature">
-              <div class="icon_and_feature">
-                <span class="chance_of_rain"></span>
-                <span>Chance of rain</span>
-              </div>
-              <span> 0 %</span>
-            </div>
-          </div>
-          <div>
-            <div class="feature">
-              <div class="icon_and_feature">
-                <span class="wind"></span>
-                <span>Wind</span>
-              </div>
-              <span class="wind">0.2 km/h</span>
-            </div>
-            <div class="feature">
-              <div class="icon_and_feature">
-                <span class="uv_index"></span>
-                <span>UV Index</span>
-              </div>
-              <span> 3</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="forecast">
-      <span> 7-DAY FORECAST</span>
-      <div class="cards">
-        <div class="card">
-          <span>Day name</span>
-          <div>
-            <span>ICON</span>
-            <span>Weather</span>
-          </div>
-          <span>36/12</span>
-        </div>
-        <div class="card">
-          <span>Day name</span>
-          <div>
-            <span>ICON</span>
-            <span>Weather</span>
-          </div>
-          <span>36/12</span>
-        </div>
-        <div class="card">
-          <span>Day name</span>
-          <div>
-            <span>ICON</span>
-            <span>Weather</span>
-          </div>
-          <span>36/12</span>
-        </div>
-        <div class="card">
-          <span>Day name</span>
-          <div>
-            <span>ICON</span>
-            <span>Weather</span>
-          </div>
-          <span>36/12</span>
-        </div>
-        <div class="card">
-          <span>Day name</span>
-          <div>
-            <span>ICON</span>
-            <span>Weather</span>
-          </div>
-          <span>36/12</span>
-        </div>
-        <div class="card">
-          <span>Day name</span>
-          <div>
-            <span>ICON</span>
-            <span>Weather</span>
-          </div>
-          <span>36/12</span>
-        </div>
-        <div class="card">
-          <span>Day name</span>
-          <div>
-            <span>ICON</span>
-            <span>Weather</span>
-          </div>
-          <span>36/12</span>
-        </div>
-      </div>
-    </div>
-  </body>
+  <body></body>
 </html>
