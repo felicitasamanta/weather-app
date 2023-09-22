@@ -10,6 +10,10 @@
     <img src="src/assets/images/map.png" width="45%" />
 </div>
 
+## Preview
+
+https://felicitasamanta.github.io/weather-app/index.html
+
 ## Overview
 
 The Weather App is a web application that provides real-time weather information for cities around the world. It allows users to:
