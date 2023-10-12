@@ -12,7 +12,7 @@ const getWeather = async ({ city, country_code }) => {
 
   if (city) {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${removeAccents(
+      `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${removeAccents(
         city
       )}&days=7&aqi=no&alerts=no`,
       requestOptions
